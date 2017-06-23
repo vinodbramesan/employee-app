@@ -9,8 +9,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./app.component.css', './style.css']
 })
 export class EmployeeListComponent implements OnInit {
-    emplist: Employee[];
-    
+    emplist: Employee[];   
+    //Some changes 
     closeResult: string;
     delIcon = "/assets/delete-icon.png"
     newIcon = "/assets/New.jpg";
