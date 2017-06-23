@@ -1,0 +1,52 @@
+<div class="col-md-12 mart15" *ngIf="employee">
+    <h2 class="page_head" *ngIf="employee.EmployeeID>0">Employee Edit</h2>
+    <h2 class="page_head" *ngIf="employee.EmployeeID==0">New Employee</h2>
+</div>
+<div class="col-md-12" *ngIf="employee">
+    <div class="segfull mart5">
+        <span>Employee Details</span>
+        <div class="clearfix"></div>
+        <div class="col-md-6">
+            <label class="col-sm-3 control-label docs-block padr0">Employee Id</label>
+            <div class="col-sm-6">
+                <div class="form-control-static">
+                    <input type="text" [(ngModel)]="employee.EmployeeID" class="form-control input-boostrap">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label class="col-sm-3 control-label docs-block padr0">Employee Name</label>
+            <div class="col-sm-6">
+                <div class="form-control-static">
+                    <input type="text"[(ngModel)]="employee.EmployeeName" class="form-control input-boostrap">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label class="col-sm-3 control-label docs-block padr0">Age</label>
+            <div class="col-sm-6">
+                <div class="form-control-static">
+                    <input type="text" [(ngModel)]="employee.Age" class="form-control input-boostrap">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <label class="col-sm-1 control-label docs-block padr0" style="width: 12.2%;">Detail</label>
+            <div class="col-sm-9">
+
+                <div class="form-control-static">
+                    <textarea [(ngModel)]="employee.Details" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="modal-footer">
+
+
+    <button (click)="Save()"  class="edit mart10">Save</button>
+    <button (click)="onBack()" class="cancel mart10">Cancel</button>
+</div>

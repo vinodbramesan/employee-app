@@ -1,0 +1,61 @@
+<div class="col-md-12 mart15">
+    <h2 class="page_head">Employee View</h2>
+</div>
+<div class="col-md-12" *ngIf="employee">
+    <div class="segfull mart5" style="min-height: 179px;">
+        <span>Employee Info</span>
+        <div class="clearfix"></div>
+
+        <div class="col-md-12">
+
+            <form class="form-horizontal">
+                <div class="col-md-6">
+                    <div class="form-group marb0">
+                        <label class="col-sm-2 control-label docs-block padr0">Employee Id:</label>
+                        <div class="col-sm-9">
+                            <p class="form-control-static op"><span>{{employee.EmployeeID}}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group marb0">
+                        <label class="col-sm-2 control-label docs-block padr0">Employee Name:</label>
+                        <div class="col-sm-9">
+                            <p class="form-control-static op"><span>{{employee.EmployeeName}}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group marb0">
+                        <label class="col-sm-2 control-label docs-block padr0">Age:</label>
+                        <div class="col-sm-9">
+                            <p class="form-control-static op"><span>{{employee.Age}}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group marb0">
+                        <label class="col-sm-2 control-label docs-block padr0">Details:</label>
+                        <div class="col-sm-9">
+                            <p class="form-control-static op"><span>{{employee.Details}}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
+<div class="modal-footer" *ngIf="employee">
+
+
+    <button [routerLink]="['/EmployeeEdit',employee.EmployeeID]" class="edit mart10">Edit</button>
+    <button (click)="onBack()" class="cancel mart10">Cancel</button>
+</div>
